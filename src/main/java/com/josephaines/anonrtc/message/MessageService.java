@@ -44,7 +44,7 @@ public class MessageService {
         }
     }
 
-    public List<Message> getMessagesBySessionID(long id) {
+    public List<Message> getMessagesBySessionID(Long id) {
         List<Message> messages = messageRepository.findAll();
         for (Message message :
                 messages) {
