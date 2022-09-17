@@ -43,4 +43,15 @@ public class MessageService {
             message.setContent(content);
         }
     }
+
+    public List<Message> getMessagesBySessionID(long id) {
+        List<Message> messages = messageRepository.findAll();
+        for (Message message :
+                messages) {
+            if (!(message.getSessionId() == id)){
+                messages.remove(message);
+            }
+        }
+        return messages;
+    }
 }

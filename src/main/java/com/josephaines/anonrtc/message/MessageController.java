@@ -21,6 +21,11 @@ public class MessageController {
         return messageService.getMessages();
     }
 
+    @GetMapping(path = "{sessionId}")
+    public List<Message> getMessageBySessionID(@PathVariable("sessionId") long sessionId) {
+        return messageService.getMessagesBySessionID(sessionId);
+    }
+
     @PostMapping
     public void registerMessage(@RequestBody Message message){
         messageService.addNewMessage(message);
