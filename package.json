@@ -1,0 +1,23 @@
+{
+  "name": "anon-rtc",
+  "version": "0.0.1",
+  "description": "Anonymous RTC web client",
+  "author": "Josep Haines",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bushycargo/Anon-RTC-Server.git"
+  },
+  "dependencies": {
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "rest": "^1.3.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.2",
+    "webpack": "^4.19.1",
+    "webpack-cli": "^3.1.0"
+  }
+}
