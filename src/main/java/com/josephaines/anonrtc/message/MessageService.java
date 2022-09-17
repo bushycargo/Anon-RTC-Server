@@ -22,4 +22,12 @@ public class MessageService {
     public void addNewMessage(Message message) {
         messageRepository.save(message);
     }
+
+    public void deleteMessage(Long id) {
+        boolean messageExists = messageRepository.existsById(id);
+        if (!messageExists){
+            throw new IllegalStateException("Message does not exist");
+        }
+        messageRepository.deleteById(id);
+    }
 }
