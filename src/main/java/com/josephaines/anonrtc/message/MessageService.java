@@ -18,4 +18,8 @@ public class MessageService {
     public List<Message> getMessages(){
         return messageRepository.findAll();
     }
+
+    public void addNewMessage(Message message) {
+        messageRepository.save(message);
+    }
 }
