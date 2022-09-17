@@ -1,6 +1,20 @@
 package com.josephaines.anonrtc.message;
 
+import javax.persistence.*;
+
+@Entity
+@Table
 public class Message {
+    @Id
+    @SequenceGenerator(
+            name = "message_sequence",
+            sequenceName = "message_sequence",
+            allocationSize = 1
+    )
+    @GeneratedValue(
+            strategy = GenerationType.SEQUENCE,
+            generator = "message_sequence"
+    )
     private Long id;
     private Long sessionId;
     private String content;
