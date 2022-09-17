@@ -31,4 +31,12 @@ public class MessageController {
         messageService.deleteMessage(id);
     }
 
+    @PutMapping(path = "{id}")
+    public void updateMessage(
+            @PathVariable("id") Long id,
+            @RequestParam(required = false) Long sessionId,
+            @RequestParam(required = false) String content){
+        messageService.updateMessage(id, sessionId, content);
+    }
+
 }
